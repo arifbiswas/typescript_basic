@@ -6,3 +6,10 @@ const userInfo : [number,string,string,boolean,unknown,string] =[101,"Ema","John
 // For example, if the first array is [1, 2, 3, 4, 5] and the second array is [2, 4, 6, 8], the function should return a new array with the elements 2 and 4 because they are present in both arrays.
 
 // The function should handle arrays of any length and should return the resulting array in the same order as they appear in the first array.
+type NumberArrayType = number[];
+
+function compareArrays(arr1:NumberArrayType, arr2:NumberArrayType):NumberArrayType {
+    return arr1.filter(x => arr2.includes(x));
+}
+
+console.log(compareArrays([1, 2, 3, 4, 5], [2, 4, 6, 8]));
